@@ -1,0 +1,41 @@
+Source: foxxy-core
+Section: foxxy
+Priority: standard
+Maintainer: Foxxy Dev Team <team@foxxysec.org>
+Uploaders: Lorenzo "Palinuro" Faletra <palinuro@foxxysec.org>,
+           Lisetta "Sheireen" Ferrero <sheireen@foxxysec.org>
+Standards-Version: 4.1.1
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: pkg-config
+Homepage: https://www.foxxysec.org/
+
+Package: foxxy-core
+Architecture: all
+Depends: 
+         apt-foxxy,
+         bash-completion,
+         dnsutils,
+         figlet,
+         htop,
+         iotop,
+         lolcat,
+         mg,
+         moreutils,
+         nano,
+         net-tools,
+         resolvconf,
+         saidar,
+         screen,
+         whois,
+         zile
+Recommends: firejail, firejail-profiles, apparmor, apparmor-profiles, apparmor-profiles-extra, apparmor-utils, selinux-policy-default, selinux-utils, tomoyo-utils, sysv-rc, falconpl, lshw, usbutils, links2, console-setup, locales, localization-config, init-system-helpers, locate
+Suggests: foxxy-interface | foxxy-cloud, foxxy-tools-libre | foxxy-tools | foxxy-tools-cloud | foxxy-tools-arm | foxxy-interface-full, foxxy-drivers
+Replaces: bash, base-files, xterm, foxxy-skel, dnsmasq, foxxy-interface-common, resolvconf
+Description: keychain package and hardening configs provider
+ Keychain package for Foxxy GNU/Linux.
+ .
+ This package is needed in order to select and install new essential packages
+ during the system setup and upgrade in order to provide the best upgrade experience during
+ critical updates.
+ .
+ This package also provides hardening profiles to make the system more secure.
